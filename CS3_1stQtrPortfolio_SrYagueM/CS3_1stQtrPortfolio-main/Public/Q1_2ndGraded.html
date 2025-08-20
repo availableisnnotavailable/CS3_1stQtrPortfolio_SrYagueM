@@ -1,0 +1,32 @@
+<body style="background-color:hsl(194, 100%, 36%);"> 
+
+<h1 style="color: orange;">Miguel Yague - III-K - Aug 11, 2025</h1> 
+<h2 style="color: orange;">Third Graded Excercise - First Quarter</h2>
+
+<p style="color: orange;"> Price is: </p>
+
+<input id="in1" type="number" placeholder="Meal Price"><br>
+<input id="in2" type="number" placeholder="Tip"><br>
+<input id="in3" type="number" placeholder="Service Charge"><br>
+
+<button onclick="calculateTotal()"> calculateTotal </button>
+
+<div id="totalOutput"> </div>
+
+<p style="color: orange;"> Total Meal: </p>
+
+<img src="https://i.pinimg.com/originals/3a/16/2e/3a162ebee12c4c959b309446599465f2.png" alt="The lorax" width="500" length="500">
+
+<script>
+    function calculateTotal() {
+        let in1 = Number(document.getElementById("in1").value);
+        let in2 = Number(document.getElementById("in2").value);
+        let in3 = Number(document.getElementById("in3").value);
+
+        let total = in1 + in2 + (in3 / 100 * in1);
+
+        document.getElementById("totalOutput").innerHTML = "Total Amount: Php " + total.toFixed(2);
+    }
+</script>
+
+</body>
